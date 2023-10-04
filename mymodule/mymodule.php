@@ -18,7 +18,7 @@ class MyModule extends Module
             'max' => '1.7.9',];
         $this->bootstrap = true;
 
-        parent:: construct();
+        parent:: __construct();
         
         $this->displayName = $this->l('Pierwszy modul', 'mymodule');
         $this->description = $this->l('opis modułu.','mymodule');    
