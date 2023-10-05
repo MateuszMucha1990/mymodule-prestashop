@@ -73,15 +73,24 @@ public function displayForm()
     $form = [
         'form' => [
             'legend' => [
-                'title' => $this->l('Settings'),
+                'title' => $this->l('Dane'),
             ],
             'input' => [
                 [
-                    'type' => 'text',
-                    'label' => $this->l('Configuration value'),
+                    'type' => 'textarea',
+                    'label' => $this->l('Wprowadź Imie'),
                     'name' => 'MYMODULE_CONFIG',
                     'size' => 20,
                     'required' => true,
+                    'autoload_rte' => true,
+                ],
+                [
+                    'type' => 'textarea',
+                    'label' => $this->l('Wprowadź nazwisko'),
+                    'name' => 'MYMODULE_CONFIG',
+                    'size' => 20,
+                    'required' => true,
+                    'autoload_rte' => true,
                 ],
             ],
             'submit' => [
@@ -156,4 +165,5 @@ public function hookActionFrontControllerSetMedia()
             ]
         );
     }    
+
 };
